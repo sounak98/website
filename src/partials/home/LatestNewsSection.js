@@ -18,7 +18,12 @@ const LatestNewsSection = () => {
       }
     }
   `);
-  const mediumPosts = data.mediumFeed.posts.slice(0, 3);
+
+  console.log(data);
+
+  const mediumPosts = data.mediumFeed.posts
+    ? data.mediumFeed.posts.slice(0, 3)
+    : [];
   return (
     <Section>
       <Row>
